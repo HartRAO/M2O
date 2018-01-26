@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" Inherits="M2O.site" %>
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <title>M2O</title>
+           <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    Masers Monitoring Organization
+                </h1>
+            </div>
+            <div class="loginDisplay">
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                        <asp:MenuItem Text="Contact" Value="Contact" NavigateUrl="~/Contact.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"> </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Observatories.aspx" Text="Observatories" Value="Observ"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/News.aspx" Text="News" Value="News"> </asp:MenuItem> 
+                        <asp:MenuItem NavigateUrl="~/Blog.aspx" Text="Blog" Value="Blog"> </asp:MenuItem> 
+
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+   </form>
+  </body>
+<footer>The site was last updated 2018-01-25. Webmaster heystekgrobler@gmail.com </footer>
+</html>
+
